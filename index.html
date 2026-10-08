@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Пашко Мирослав, ІП-41, лабораторна робота 2, HTML5, CSS3, таблиці, position, transform">
+    <meta name="description" content="Лабораторна робота №2: таблиці в HTML5 та створення зображень засобами CSS3 (варіант 1)">
+    <title>Пашко М. П., ІП-41, ЛР-2, Варіант 1</title>
+
+    <style>
+        .lab-table {
+            width: 660px;
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .lab-table td {
+            height: 40px;
+            border: 2px solid #555555;
+            text-align: center;
+            vertical-align: middle;
+            padding: 4px;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        /* 1-й рядок: #nn8f8f, nn = 01 (варіант 1) */
+        .row-1 td {
+            background-color: #018f8f;
+            color: #ffffff;
+        }
+
+        /* 2-й рядок: #f5f5nn, nn = 01 (варіант 1) */
+        .row-2 td {
+            background-color: #f5f501;
+            color: #0101f5;
+        }
+
+        /* При наведенні кольори фону й тексту міняються місцями */
+        .row-1:hover td {
+            background-color: #ffffff;
+            color: #018f8f;
+        }
+
+        .row-2:hover td {
+            background-color: #0101f5;
+            color: #f5f501;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Завдання 1. Таблиця (варіант 1)</h2>
+
+    <table class="lab-table">
+        <colgroup>
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 12.5%">
+            <col style="width: 12.5%">
+        </colgroup>
+
+        <!-- 1-й рядок: ПІБ виконавця, окремо в кожній комірці -->
+        <tr class="row-1">
+            <td colspan="2" rowspan="2">Пашко</td>
+            <td>Мирослав</td>
+            <td rowspan="2">Павлович</td>
+            <td rowspan="2"></td>
+        </tr>
+
+        <!-- 2-й рядок: група, номер лабораторної роботи, номер варіанту -->
+        <tr class="row-2">
+            <td>ІП-41<br>ЛР-2<br>Варіант 1</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td rowspan="2"></td>
+            <td rowspan="2"></td>
+            <td colspan="2" rowspan="2"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+        </tr>
+    </table> 
+</body>
+</html>
