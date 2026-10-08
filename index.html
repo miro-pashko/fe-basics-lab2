@@ -6,7 +6,9 @@
     <meta name="keywords" content="Пашко Мирослав, ІП-41, лабораторна робота 2, HTML5, CSS3, таблиці, position, transform">
     <meta name="description" content="Лабораторна робота №2: таблиці в HTML5 та створення зображень засобами CSS3 (варіант 1)">
     <title>Пашко М. П., ІП-41, ЛР-2, Варіант 1</title>
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Завдання 1: стилі таблиці -->
     <style>
         .lab-table {
             width: 660px;
@@ -86,6 +88,29 @@
         <tr>
             <td></td>
         </tr>
-    </table> 
+    </table>
+
+    <h2>Завдання 2. Зображення світлофора (варіант 1)</h2>
+
+    <div class="figures">
+        <figure>
+            <div class="traffic-light traffic-light--position">
+                <div class="light light--red"></div>
+                <div class="light light--yellow"></div>
+                <div class="light light--green"></div>
+            </div>
+            <figcaption>1. За допомогою position</figcaption>
+        </figure>
+
+        <figure>
+            <div class="traffic-light traffic-light--transform">
+                <div class="light light--red"></div>
+                <div class="light light--yellow"></div>
+                <div class="light light--green"></div>
+            </div>
+            <figcaption>2. За допомогою transform</figcaption>
+        </figure>
+    </div>
+
 </body>
 </html>

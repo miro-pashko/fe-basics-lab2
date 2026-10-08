@@ -1,0 +1,76 @@
+/* Завдання 2: світлофор (варіант 1) */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.figures {
+    display: flex;
+    gap: 80px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 12px;
+}
+
+/* Спільний вигляд корпусу світлофора */
+.traffic-light {
+    width: 80px;
+    height: 200px;
+    background-color: #d9d9d9;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+/* Спільний вигляд сигналів */
+.light {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.light--red    { background-color: #ff0000; }
+.light--yellow { background-color: #ffff00; }
+.light--green  { background-color: #00b050; }
+
+/* ---------- 1. Варіант із position ---------- */
+
+.traffic-light--position {
+    position: relative;
+}
+
+.traffic-light--position .light {
+    position: absolute;
+    left: 9px;
+}
+
+.traffic-light--position .light--red    { top: 8px; }
+.traffic-light--position .light--yellow { top: 69px; }
+.traffic-light--position .light--green  { top: 130px; }
+
+/* ---------- 2. Варіант із transform ---------- */
+
+/* Усі сигнали стоять в одній клітинці сітки (у лівому верхньому куті),
+   а на свої місця їх переміщує лише transform: translate() */
+.traffic-light--transform {
+    display: grid;
+    justify-items: start;
+    align-items: start;
+}
+
+.traffic-light--transform .light {
+    grid-area: 1 / 1;
+}
+
+.traffic-light--transform .light--red    { transform: translate(9px, 8px); }
+.traffic-light--transform .light--yellow { transform: translate(9px, 69px); }
+.traffic-light--transform .light--green  { transform: translate(9px, 130px); }
